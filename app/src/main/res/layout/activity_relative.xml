@@ -30,8 +30,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/gigachadcat"
         android:layout_centerHorizontal="true"
-        android:textSize="30dp"
-        android:hint="@string/redalert" />
+        android:hint="@string/redalert"
+        android:textSize="@dimen/textSize" />
 
     <Button
         android:id="@+id/btnredalert"
