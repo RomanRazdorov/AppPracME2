@@ -4,4 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RelativeActivity"/>
+    tools:context=".RelativeActivity">
+
+
+    <TextView
+        android:id="@+id/gigachadcatmessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/gigachadcat"
+        android:textSize="32dp" />
+
+    <ImageView
+        android:id="@+id/gigachadcat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gigachadcatmessage"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/cat" />
+
+    <TextView
+        android:id="@+id/hintredalert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gigachadcat"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:hint="@string/redalert" />
+
+    <Button
+        android:id="@+id/btnredalert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hintredalert"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="@string/cherdenkosurprise" />
+
+    <ImageView
+        android:id="@+id/svgarch"
+        android:layout_width="46dp"
+        android:layout_height="48dp"
+        android:layout_alignTop="@+id/btnredalert"
+        android:layout_toRightOf="@+id/btnredalert"
+        android:src="@drawable/ic_baseline_architecture_24" />
+
+    <ImageView
+        android:id="@+id/cat"
+        android:layout_width="179dp"
+        android:layout_height="344dp"
+        android:layout_below="@+id/btnredalert"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/cat2" />
+
+
+</RelativeLayout>
