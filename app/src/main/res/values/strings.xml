@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">AppPracME2</string>
+    <string name="nickname">Nickname</string>
+    <string name="fname">Name</string>
+    <string name="sname">Surname</string>
+    <string name="email">example@gmail.com</string>
+    <string name="regscreen">Join Us Now!</string>
+    <string name="passwd1">Input your password here</string>
+    <string name="passwd2">Repeat your password</string>
+    <string name="btnReg">Reg In!</string>
+    <string name="btnLog">Log In!</string>
+    <string name="logNow">Already Have Account?</string>
+    <string name="recievermessage">Reciever Activity</string>
 </resources>
