@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -41,5 +44,9 @@ public class DataRecieverActivity extends AppCompatActivity {
         sendIntent.putExtra("sendName", sendName.getText());
         sendIntent.putExtra("sendSurname", sendSurname.getText());
         sendIntent.putExtra("sendEmail", sendEmail.getText());
+    }
+
+    public void onClickLog(View view) {
+        Log.i("DataRecieverActivity", "Data Recieved");
     }
 }

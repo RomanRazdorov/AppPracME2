@@ -6,12 +6,12 @@
         <type value="RUNNING_DEVICE_TARGET" />
         <deviceKey>
           <Key>
-            <type value="SERIAL_NUMBER" />
-            <value value="SG6TW4MV7LDQ7TGY" />
+            <type value="VIRTUAL_DEVICE_PATH" />
+            <value value="C:\Users\RomanRazdorov\.android\avd\Oppo_A17_API_31.avd" />
           </Key>
         </deviceKey>
       </Target>
     </runningDeviceTargetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2023-02-23T18:41:59.346836800Z" />
+    <timeTargetWasSelectedWithDropDown value="2023-02-23T19:25:27.767836500Z" />
   </component>
 </project>

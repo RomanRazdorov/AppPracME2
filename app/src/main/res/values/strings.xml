@@ -4,7 +4,7 @@
     <string name="fname">Name</string>
     <string name="sname">Surname</string>
     <string name="email">example@gmail.com</string>
-    <string name="regscreen">Join Us Now!</string>
+    <string name="title">Join Us Now!</string>
     <string name="passwd1">Input your password here</string>
     <string name="passwd2">Repeat your password</string>
     <string name="btnReg">Reg In!</string>
@@ -14,4 +14,6 @@
     <string name="gigachadcat">Giga Chad Cat Supreme</string>
     <string name="redalert">Soviet Power Supreme!</string>
     <string name="cherdenkosurprise">Cherdenko Surprise! :D</string>
+    <string name="btnReciever">Confirm Data Arrive!</string>
+    <string name="regscreen">Go</string>
 </resources>
