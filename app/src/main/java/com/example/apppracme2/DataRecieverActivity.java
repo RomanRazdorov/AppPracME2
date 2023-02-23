@@ -16,7 +16,7 @@ public class DataRecieverActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_reciever);
 
-        Intent catchIntent = getIntent();
+               Intent catchIntent = getIntent();
         TextView Nick = (TextView)findViewById(R.id.getNick);
         TextView Names = (TextView) findViewById(R.id.getName);
         TextView Surnames = (TextView)findViewById(R.id.getSurname);

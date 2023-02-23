@@ -14,12 +14,6 @@
         android:theme="@style/Theme.AppPracME2"
         tools:targetApi="31">
         <activity
-            android:name=".RelativeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LinearActivity"
-            android:exported="false" />
-        <activity
             android:name=".DataRecieverActivity"
             android:exported="false" />
         <activity
