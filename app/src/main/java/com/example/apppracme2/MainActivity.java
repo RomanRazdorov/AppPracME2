@@ -23,8 +23,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 EditText nickname = (EditText)findViewById(R.id.nickname);
+                EditText fname = (EditText)findViewById(R.id.name);
+                EditText sname = (EditText)findViewById(R.id.surname);
+                EditText email = (EditText)findViewById(R.id.email);
                 Intent intent = new Intent(MainActivity.this, DataRecieverActivity.class);
                 intent.putExtra("Nickname", nickname.getText().toString());
+                intent.putExtra("FName", fname.getText().toString());
+                intent.putExtra("SName", sname.getText().toString());
+                intent.putExtra("Email", email.getText().toString());
                 startActivity(intent);
             }
         });
