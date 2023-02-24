@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
         TextView loadTitle = (TextView)findViewById(R.id.regscrn);
         loadTitle.setText(R.string.title);
+        ImageView loadPicture = (ImageView)findViewById(R.id.catgif);
+        loadPicture.setImageResource(R.drawable.catgif);
         Button btnReg = (Button) findViewById(R.id.btnreg);
 
         btnReg.setOnClickListener(new View.OnClickListener() {

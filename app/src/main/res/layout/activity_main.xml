@@ -126,7 +126,6 @@
         android:id="@+id/catgif"
         android:layout_width="645dp"
         android:layout_height="245dp"
-        android:src="@drawable/catgif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
