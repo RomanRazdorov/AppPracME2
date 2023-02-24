@@ -16,4 +16,8 @@
     <string name="cherdenkosurprise">Cherdenko Surprise! :D</string>
     <string name="btnReciever">Confirm Data Arrive!</string>
     <string name="regscreen">Go</string>
+    <string name="media_title_hint">Заголовок</string>
+    <string name="media_description_text">Описание</string>
+    <string name="add_button_text">Добавить</string>
+    <string name="media_image_description">Image description</string>
 </resources>
