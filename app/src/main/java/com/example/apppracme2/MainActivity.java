@@ -4,6 +4,7 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -21,12 +22,19 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    //Do Intent
-
+    private static final int REQUEST_CODE = 1;
+    EditText nickname;
+    EditText fname;
+    EditText sname;
+    EditText email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        nickname = (EditText)findViewById(R.id.nickname);
+        fname = (EditText)findViewById(R.id.name);
+        sname = (EditText)findViewById(R.id.surname);
+        email = (EditText)findViewById(R.id.email);
 
         TextView loadTitle = (TextView)findViewById(R.id.regscrn);
         loadTitle.setText(R.string.title);
@@ -37,18 +45,27 @@ public class MainActivity extends AppCompatActivity {
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText nickname = (EditText)findViewById(R.id.nickname);
-                EditText fname = (EditText)findViewById(R.id.name);
-                EditText sname = (EditText)findViewById(R.id.surname);
-                EditText email = (EditText)findViewById(R.id.email);
+
                 Intent intent = new Intent(MainActivity.this, DataRecieverActivity.class);
                 intent.putExtra("Nickname", nickname.getText().toString());
                 intent.putExtra("FName", fname.getText().toString());
                 intent.putExtra("SName", sname.getText().toString());
                 intent.putExtra("Email", email.getText().toString());
-                startActivity(intent);
+                startActivityForResult(intent, REQUEST_CODE);
                 Log.i("MainActivity", "Data transferred");
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
+            assert data != null;
+            nickname.setText(data.getStringExtra("Nickname"));
+            fname.setText(data.getStringExtra("FName"));
+            sname.setText(data.getStringExtra("SName"));
+            email.setText(data.getStringExtra("Email"));
+        }
     }
 }
