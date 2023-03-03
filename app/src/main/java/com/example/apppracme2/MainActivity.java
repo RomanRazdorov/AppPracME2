@@ -27,6 +27,12 @@ public class MainActivity extends AppCompatActivity {
     EditText fname;
     EditText sname;
     EditText email;
+    ActivityResultLauncher<Intent> dataRecieverActivityResultLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(), result -> {
+                if (result.getResultCode() == RESULT_OK){
+                    Intent data = result.getData();
+                }
+            });
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,21 +57,9 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("FName", fname.getText().toString());
                 intent.putExtra("SName", sname.getText().toString());
                 intent.putExtra("Email", email.getText().toString());
-                startActivityForResult(intent, REQUEST_CODE);
+                dataRecieverActivityResultLauncher.launch(intent);
                 Log.i("MainActivity", "Data transferred");
             }
         });
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
-            assert data != null;
-            nickname.setText(data.getStringExtra("Nickname"));
-            fname.setText(data.getStringExtra("FName"));
-            sname.setText(data.getStringExtra("SName"));
-            email.setText(data.getStringExtra("Email"));
-        }
     }
 }
